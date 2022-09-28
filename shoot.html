@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+        }
+
+        .syringe-body {
+            width: 200px;
+            height: 100px;
+            background-image: linear-gradient(0deg, white 0%, lightgrey 45%, white 100%);
+            border: 1px solid lightgrey;
+            position: absolute;
+            top: 50%;
+            left: 45%;
+            transform: translate(-50%, -50%);
+        }
+
+        .syringe-body p {
+            position: absolute;
+            bottom: 0;
+            color: lightgray;
+            font-family: '微軟正黑體';
+            font-size: bold;
+        }
+
+        .syringe-body::before {
+            content: "";
+            width: 50px;
+            height: 100px;
+            background-color: black;
+            border: 1px solid black;
+            position: absolute;
+            right: -50px;
+            top: -1px;
+            z-index: 2;
+        }
+
+        .syringe-body::after {
+            content: "";
+            width: 200px;
+            height: 100px;
+            border: 1px solid lightgrey;
+            position: absolute;
+            right: -251px;
+            top: -1px;
+            background-image: linear-gradient(0deg, rgb(245, 245, 163) 0%, rgb(205, 205, 137) 45%, rgb(245, 245, 163) 100%);
+            z-index: -1;
+        }
+
+        .syringe-joint {
+            width: 50px;
+            height: 100px;
+            background-image: linear-gradient(0deg, white 0%, lightgrey 45%, white 100%);
+            border: 1px solid lightgrey;
+            border-radius: 10%;
+            position: absolute;
+            left: -50%;
+        }
+
+        .syringe-joint::before {
+            content: "";
+            width: 50px;
+            height: 70px;
+            background-image: linear-gradient(0deg, white 0%, lightgrey 45%, white 100%);
+            border: 1px solid lightgrey;
+            position: absolute;
+            bottom: 15px;
+            right: -50px;
+            z-index: -1;
+        }
+
+        .syringe-joint::after {
+            content: "";
+            width: 50px;
+            height: 70px;
+            background-image: linear-gradient(0deg, white 0%, lightgrey 45%, white 100%);
+            border: 1px solid lightgrey;
+            position: absolute;
+            bottom: 15px;
+            right: -550px;
+            z-index: -2;
+        }
+
+        .syringe-deg {
+            width: 200px;
+            height: 10px;
+            background-image: linear-gradient(90deg, transparent 0%, transparent 9%, lightgrey 9%, lightgrey 10%, transparent 10%, transparent 19%, lightgrey 19%, lightgrey 20%, transparent 20%, transparent 29%, lightgrey 29%, lightgrey 30%, transparent 30%, transparent 39%, lightgrey 39%, lightgrey 40%, transparent 40%, transparent 49%, lightgrey 49%, lightgrey 50%, transparent 50%, transparent 59%, lightgrey 59%, lightgrey 60%, transparent 60%, transparent 69%, lightgrey 69%, lightgrey 70%, transparent 70%, transparent 79%, lightgrey 79%, lightgrey 80%, transparent 80%, transparent 89%, lightgrey 89%, lightgrey 90%, transparent 90%, transparent 99%, lightgrey 99%, lightgrey 100%);
+            position: absolute;
+
+        }
+
+        .syringe-deg::before {
+            content: "";
+            width: 200px;
+            height: 10px;
+            background: repeating-linear-gradient(90deg, transparent, transparent 20px, lightgrey 20px, lightgrey 21px);
+            position: absolute;
+            right: -240px;
+        }
+
+        .syringe-deg::after {
+            content: "";
+            width: 50px;
+            height: 1px;
+            background-color: black;
+            position: absolute;
+            top: 50px;
+            right: -350px;
+            z-index: -3;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="syringe-body">
+        <p>Made in Taiwan</p>
+        <div class="syringe-joint"></div>
+        <div class="syringe-deg"></div>
+    </div>
+</body>
+
+</html>
